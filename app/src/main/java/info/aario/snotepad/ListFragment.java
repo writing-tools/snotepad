@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// These two are for date in note's name:
+// Elias: These two are for date in note's name:
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -164,7 +164,7 @@ public class ListFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LocalDateTime myDateObj = LocalDateTime.now(); // elias
+                LocalDateTime myDateObj = LocalDateTime.now(); // Elias
                 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyyMMdd");
                 String formattedDate = myDateObj.format(myFormatObj);
                 formattedDate = formattedDate + " ";
