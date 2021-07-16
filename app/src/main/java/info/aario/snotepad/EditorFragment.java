@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by aario on 3/16/17.
  */
@@ -147,7 +148,8 @@ public class EditorFragment extends Fragment {
         }
 
         if (activity.filer.writeToFile(path, getEditorText())) {
-            activity.makeSnackBar("Changes saved to " + path);
+            activity.makeSnackBar("Changes saved to " + path); // Elias: notification.
+
             if (rename)
                 activity.filer.delete(oldPath);
             activity.editor_modified = false;

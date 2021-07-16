@@ -24,6 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 /**
  * Created by aario on 3/16/17.
  */
@@ -180,7 +181,8 @@ public class ListFragment extends Fragment {
             String filename = ((TextView) itemInfo.targetView.findViewById(android.R.id.text1)).getText().toString();
             if (activity.filer.delete(path + "/" + filename)) {
                 search(svSearch.getQuery().toString());
-                activity.makeSnackBar("File " + filename + " successfully deleted.");
+
+                activity.makeSnackBar("File " + filename + " successfully deleted."); // Elias: notification
             }
         }
 

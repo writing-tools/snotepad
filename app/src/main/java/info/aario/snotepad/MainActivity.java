@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void makeSnackBar(String text) {
-        Snackbar.make(coordinatorLayoutForSnackBar, text, Snackbar.LENGTH_LONG)
+        Snackbar.make(coordinatorLayoutForSnackBar, text, 100) // Snackbar.LENGTH_LONG = 2750; short = 1500
+        // https://stackoverflow.com/questions/56598610/what-is-the-actual-duration-of-a-snackbar-with-length-long
                 .setAction("Action", null).show();
     }
 
