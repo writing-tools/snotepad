@@ -7,13 +7,14 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/editorToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        android:weightSum="1">
+        android:weightSum="1"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
 
         <Button
             android:id="@+id/btUndo"
@@ -41,6 +42,13 @@
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:background="@android:drawable/ic_menu_share"
+            android:enabled="true" />
+
+        <Button
+            android:id="@+id/btDate"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_day"
             android:enabled="true" />
 
     </android.support.v7.widget.Toolbar>
@@ -76,4 +84,5 @@
             android:overScrollMode="always"
             android:scrollbars="horizontal|vertical" />
     </ScrollView>
+
 </LinearLayout>

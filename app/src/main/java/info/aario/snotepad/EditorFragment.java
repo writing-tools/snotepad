@@ -15,6 +15,10 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 
+// Elias: for pasting date button:
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import android.content.ClipboardManager;
 
 /**
  * Created by aario on 3/16/17.
@@ -33,6 +37,7 @@ public class EditorFragment extends Fragment {
     private Button btRedo;
     private Button btSave;
     private Button btShare;
+    private Button btDate;
     private int undoHistoryCursor = 0;
     TextWatcher textWatcher = new TextWatcher() {
         @Override
@@ -131,6 +136,13 @@ public class EditorFragment extends Fragment {
                 share();
             }
         });
+        btDate = (Button) view.findViewById(R.id.btDate); // Elias
+        btDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pasteDate();
+            }
+        });
         return view;
     }
 
@@ -154,6 +166,37 @@ public class EditorFragment extends Fragment {
                 activity.filer.delete(oldPath);
             activity.editor_modified = false;
         }
+    }
+
+    private void pasteDate() {
+        LocalDateTime myDateObj = LocalDateTime.now();
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyyMMdd");
+        String formattedDate = myDateObj.format(myFormatObj);
+        // date source: https://www.w3schools.com/java/java_date.asp
+
+
+        // TODO: how to paste this text? see:
+        // https://developer.android.com/guide/topics/text/copy-paste
+        // https://safe.duckduckgo.com/?q=stackoverflow+paste+string+to+clipboard+java+and+roid&kp=1&atb=v259-7__&ia=web
+        // https://safe.duckduckgo.com/?q=stackoverflow+copy+string+to+clipboard+java+and+roid&kp=1&atb=v259-7__&ia=web
+
+        //ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+        //clipboard.setText(formattedDate);
+
+        /*
+        if(android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.HONEYCOMB) {
+            android.text.ClipboardManager clipboard = (android.text.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            clipboard.setText(formattedDate);
+        } else {
+            android.content.ClipboardManager clipboard = (android.content.ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            android.content.ClipData clip = android.content.ClipData.newPlainText(formattedDate, formattedDate);
+            clipboard.setPrimaryClip(clip);
+        }*/
+
+        //ClipboardManager clipboard = (ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+        //ClipData clip = ClipData.newPlainText("your_text_to_be_copied");
+        //clipboard.setPrimaryClip(clip);
+
     }
 
     private void share() {
