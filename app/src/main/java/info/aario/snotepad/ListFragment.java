@@ -24,6 +24,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// These two are for date in note's name:
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 /**
  * Created by aario on 3/16/17.
@@ -156,11 +160,16 @@ public class ListFragment extends Fragment {
         });
         FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
         fab.setVisibility(View.VISIBLE);
-        fab.setImageDrawable(ContextCompat.getDrawable(activity, android.R.drawable.ic_input_add));
+        fab.setImageDrawable(ContextCompat.getDrawable(activity, android.R.drawable.ic_input_add)); // add button
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                activity.editFile(proposeNewFilePath("Note"));
+                LocalDateTime myDateObj = LocalDateTime.now(); // elias
+                DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyyMMdd");
+                String formattedDate = myDateObj.format(myFormatObj);
+                formattedDate = formattedDate + " ";
+
+                activity.editFile(proposeNewFilePath(formattedDate)); // was "Note"
             }
         });
         refresh();
