@@ -170,7 +170,7 @@ public class EditorFragment extends Fragment {
 
     private void pasteDate() {
         LocalDateTime myDateObj = LocalDateTime.now();
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyyMMdd");
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formattedDate = myDateObj.format(myFormatObj);
         // date source: https://www.w3schools.com/java/java_date.asp
 
