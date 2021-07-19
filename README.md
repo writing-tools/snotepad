@@ -1,3 +1,6 @@
+# Fork from:
+https://github.com/aario/snotepad
+
 # SNotepad
 SNotepad is simple yet professional notepad app for android. The S stands for Suckless/Simple.
 
