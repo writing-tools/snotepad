@@ -1,4 +1,5 @@
 - Button to insert date 2021-07-19
+- Show total notes count + total size (backup purposes)
 
 X - Make date as note's name
 X - Reduce time of "Changes saved to..." (after saving a file)
