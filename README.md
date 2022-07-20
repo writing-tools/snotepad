@@ -3,6 +3,7 @@ https://github.com/aario/snotepad
 
 ### Clone:
 `git clone git@github.com:elyoas/snotepad.git`
+
 https://github.com/elyoas/snotepad
 
 ### SNotepad
