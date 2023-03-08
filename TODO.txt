@@ -7,4 +7,6 @@ X - Make date as note's name
 X - Reduce time of "Changes saved to..." (after saving a file)
 X - how to build it on linux?
 
-
+* put the buttons on top bar (remove "snotepad" text)
+* highlight note when going back
+* put the add button on top
