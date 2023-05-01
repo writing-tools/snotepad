@@ -9,13 +9,13 @@
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Snotepad"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
+            android:label="Notes"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
         </provider>
         <activity
             android:name="com.nononsenseapps.filepicker.FilePickerActivity"
-            android:label="@string/app_name"
+            android:label="Snotepad"
             android:theme="@style/FilePickerTheme">
             <intent-filter>
                 <action android:name="android.intent.action.GET_CONTENT" />
