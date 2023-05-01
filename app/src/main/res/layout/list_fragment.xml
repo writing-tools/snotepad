@@ -14,13 +14,13 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        <SearchView
+        <android.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-        </SearchView>
+        </android.widget.SearchView>
     </android.support.v7.widget.Toolbar>
 
     <ListView

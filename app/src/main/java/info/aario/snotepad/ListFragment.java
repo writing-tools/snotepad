@@ -1,5 +1,6 @@
 package info.aario.snotepad;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -145,6 +146,7 @@ public class ListFragment extends Fragment {
         });
         registerForContextMenu(lvFiles);
         svSearch = (SearchView) view.findViewById(R.id.searchView);
+        // svSearch.setTextColor(android.graphics.Color.WHITE); // ELIAS: does not work..
         svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
