@@ -11,7 +11,7 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/editorToolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="27dp"
         android:background="?attr/colorPrimary"
         android:weightSum="1"
         app:popupTheme="@style/AppTheme.PopupOverlay">
@@ -32,24 +32,29 @@
 
         <Button
             android:id="@+id/btSave"
-            android:layout_width="48dp"
+            android:translationX="10dp"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_save"
+            android:background="@android:drawable/ic_menu_send"
             android:enabled="true" />
 
         <Button
             android:id="@+id/btShare"
+            android:translationX="20dp"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:background="@android:drawable/ic_menu_share"
             android:enabled="true" />
 
+<!--
         <Button
+            android:translationX="20dp"
             android:id="@+id/btDate"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
             android:background="@android:drawable/ic_menu_day"
             android:enabled="true" />
+-->
 
     </android.support.v7.widget.Toolbar>
 

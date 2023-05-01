@@ -136,6 +136,7 @@ public class EditorFragment extends Fragment {
                 share();
             }
         });
+/*
         btDate = (Button) view.findViewById(R.id.btDate); // Elias
         btDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -143,6 +144,7 @@ public class EditorFragment extends Fragment {
                 pasteDate();
             }
         });
+*/
         return view;
     }
 
