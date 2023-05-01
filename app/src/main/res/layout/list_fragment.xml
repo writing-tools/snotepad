@@ -25,6 +25,8 @@
 
     <ListView
         android:id="@+id/filesList"
+        android:fadeScrollbars="false"
+        android:scrollbarDefaultDelayBeforeFade="999999"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:footerDividersEnabled="false"
