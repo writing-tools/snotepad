@@ -20,11 +20,11 @@
             android:id="@+id/btUndo"
             android:translationX="-15dp"
             android:layout_width="48dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="Undo"
             android:textAllCaps="false"
-            android:textSize="10"
-            android:padding="0"
+            android:textSize="10dp"
+            android:padding="0dp"
             android:enabled="false" />
         <!--android:background="@android:drawable/ic_undo"-->
 
@@ -32,11 +32,11 @@
             android:id="@+id/btRedo"
             android:translationX="-18dp"
             android:layout_width="48dp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:text="Redo"
             android:textAllCaps="false"
-            android:textSize="10"
-            android:padding="0"
+            android:textSize="10dp"
+            android:padding="0dp"
             android:enabled="false" />
         <!--android:background="@android:drawable/ic_redo"-->
 
@@ -50,8 +50,8 @@
             android:gravity="center"
             android:minHeight="0dp"
             android:minWidth="0dp"
-            android:textSize="15"
-            android:padding="0"
+            android:textSize="15dp"
+            android:padding="0dp"
             android:enabled="true" />
         <!--android:background="@android:drawable/ic_menu_send"-->
 
@@ -62,8 +62,8 @@
             android:layout_height="30dp"
             android:text="Share"
             android:textAllCaps="false"
-            android:textSize="10"
-            android:padding="0"
+            android:textSize="10dp"
+            android:padding="0dp"
             android:enabled="true" />
             <!-- android:background="@android:drawable/ic_menu_share" -->
 <!--
