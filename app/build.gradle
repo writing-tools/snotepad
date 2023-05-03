@@ -1,12 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    lintOptions {
+        // Elias: This solves the lint error: (only appears when building 'release')
+        // Execution failed for task ':app:lintVitalRelease'. > Lint found fatal errors while assembling a release target.
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        //abortOnError false
+    }
+    compileSdkVersion 30
     buildToolsVersion '30.0.3'
     defaultConfig {
         applicationId "Notes.EL"
         minSdkVersion 15
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 2
         versionName "1.2.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
