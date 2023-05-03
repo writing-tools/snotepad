@@ -42,7 +42,7 @@
 
         <Button
             android:id="@+id/btSave"
-            android:translationX="-10dp"
+            android:translationX="-15dp"
             android:layout_width="250dp"
             android:layout_height="30dp"
             android:text="Save"
@@ -57,7 +57,7 @@
 
         <Button
             android:id="@+id/btShare"
-            android:translationX="0dp"
+            android:translationX="-15dp"
             android:layout_width="48dp"
             android:layout_height="30dp"
             android:text="Share"
