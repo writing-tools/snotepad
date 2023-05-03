@@ -18,34 +18,54 @@
 
         <Button
             android:id="@+id/btUndo"
+            android:translationX="-15dp"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_undo"
+            android:text="Undo"
+            android:textAllCaps="false"
+            android:textSize="10"
+            android:padding="0"
             android:enabled="false" />
+        <!--android:background="@android:drawable/ic_undo"-->
 
         <Button
             android:id="@+id/btRedo"
+            android:translationX="-18dp"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/ic_redo"
+            android:text="Redo"
+            android:textAllCaps="false"
+            android:textSize="10"
+            android:padding="0"
             android:enabled="false" />
+        <!--android:background="@android:drawable/ic_redo"-->
 
         <Button
             android:id="@+id/btSave"
-            android:translationX="10dp"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_send"
+            android:translationX="-10dp"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="15"
+            android:padding="0"
             android:enabled="true" />
+        <!--android:background="@android:drawable/ic_menu_send"-->
 
         <Button
             android:id="@+id/btShare"
-            android:translationX="20dp"
+            android:translationX="0dp"
             android:layout_width="48dp"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_menu_share"
+            android:layout_height="30dp"
+            android:text="Share"
+            android:textAllCaps="false"
+            android:textSize="10"
+            android:padding="0"
             android:enabled="true" />
-
+            <!-- android:background="@android:drawable/ic_menu_share" -->
 <!--
         <Button
             android:translationX="20dp"
