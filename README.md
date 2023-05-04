@@ -1,6 +1,11 @@
-##### Forked from: https://github.com/aario/snotepad
+#### Forked from:
+https://github.com/aario/snotepad
 
-##### Clone: `git clone git@github.com:elyoas/snotepad.git`
+Download APK from:
+https://github.com/elyoas/snotepad/releases
+
+Copy project:
+`git clone git@github.com:elyoas/snotepad.git`
 
 https://github.com/elyoas/snotepad
 
