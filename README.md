@@ -1,12 +1,10 @@
-### Forked from:
-https://github.com/aario/snotepad
+##### Forked from: https://github.com/aario/snotepad
 
-### Clone:
-`git clone git@github.com:elyoas/snotepad.git`
+##### Clone: `git clone git@github.com:elyoas/snotepad.git`
 
 https://github.com/elyoas/snotepad
 
-### SNotepad
+### Notes
 SNotepad is simple yet professional notepad app for android. The S stands for Suckless/Simple.
 
 <a href="https://f-droid.org/packages/info.aario.snotepad/" target="_blank">
