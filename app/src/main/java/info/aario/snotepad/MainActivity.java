@@ -161,42 +161,57 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
+    public void onBackPressed()
+    {
+        // Elias: This is to clear the search
+        if(listFragment.svSearch.isShown())
+        {
+            listFragment.svSearch.setQuery("", false);
+            listFragment.svSearch.clearFocus();
+        }
+        else
+        {
+            int count = getSupportFragmentManager().getBackStackEntryCount();
 
-        int count = getSupportFragmentManager().getBackStackEntryCount();
-
-        if (count == 0) {
-            super.onBackPressed();
-        } else if (editor_modified) {
-            DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    switch (which) {
-                        case DialogInterface.BUTTON_POSITIVE:
-                            //Yes button clicked
-                            currentEditorFragment.save();
-                            break;
-                        case DialogInterface.BUTTON_NEGATIVE:
-                            //No button clicked
-                            getSupportFragmentManager().popBackStack();
-                            break;
-                        case DialogInterface.BUTTON_NEUTRAL:
-                            //Cancel button clicked
-                            return;
+            if (count == 0)
+            {
+                super.onBackPressed();
+            }
+            else if (editor_modified)
+            {
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which)
+                        {
+                            case DialogInterface.BUTTON_POSITIVE:
+                                //Yes button clicked
+                                currentEditorFragment.save();
+                                break;
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                //No button clicked
+                                getSupportFragmentManager().popBackStack();
+                                break;
+                            case DialogInterface.BUTTON_NEUTRAL:
+                                //Cancel button clicked
+                                return;
+                        }
+                        setLastOpenedFilePath("");//Clear last opened file path
+                        getSupportFragmentManager().popBackStack();
                     }
-                    setLastOpenedFilePath("");//Clear last opened file path
-                    getSupportFragmentManager().popBackStack();
-                }
-            };
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage(getResources().getString(R.string.save_dialog_question))
-                    .setPositiveButton(getResources().getString(R.string.yes), dialogClickListener)
-                    .setNegativeButton(getResources().getString(R.string.no), dialogClickListener)
-                    .setNeutralButton(getResources().getString(R.string.cancel), dialogClickListener)
-                    .show();
-        } else {
-            setLastOpenedFilePath("");//Clear last opened file path
-            getSupportFragmentManager().popBackStack();
+                };
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage(getResources().getString(R.string.save_dialog_question))
+                        .setPositiveButton(getResources().getString(R.string.yes), dialogClickListener)
+                        .setNegativeButton(getResources().getString(R.string.no), dialogClickListener)
+                        .setNeutralButton(getResources().getString(R.string.cancel), dialogClickListener)
+                        .show();
+            }
+            else
+            {
+                setLastOpenedFilePath("");//Clear last opened file path
+                getSupportFragmentManager().popBackStack();
+            }
         }
     }
 }
