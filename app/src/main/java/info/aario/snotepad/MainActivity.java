@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed()
     {
         // Elias: This is to clear the search
+        // TODO: What is better, is to check if the searchview is filled instead of isshown()
         if(listFragment.svSearch.isShown())
         {
             listFragment.svSearch.setQuery("", false);
@@ -177,11 +178,13 @@ public class MainActivity extends AppCompatActivity {
             {
                 super.onBackPressed();
             }
-            else if (editor_modified)
+            else if (editor_modified) // I.e. if you have edited a note and did not save it
             {
-                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener()
+                {
                     @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                    public void onClick(DialogInterface dialog, int which)
+                    {
                         switch (which)
                         {
                             case DialogInterface.BUTTON_POSITIVE:
