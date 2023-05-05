@@ -7,7 +7,7 @@
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/listToolbar"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -21,7 +21,7 @@
             android:layout_weight="1">
 
         </android.widget.SearchView>
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <ListView
         android:id="@+id/filesList"

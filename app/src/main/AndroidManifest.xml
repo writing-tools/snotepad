@@ -16,6 +16,7 @@
         <activity
             android:name=".MainActivity"
             android:label="Notes"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +25,7 @@
             </intent-filter>
         </activity>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -35,6 +36,7 @@
         <activity
             android:name="com.nononsenseapps.filepicker.FilePickerActivity"
             android:label="Snotepad"
+            android:exported="true"
             android:theme="@style/FilePickerTheme">
             <intent-filter>
                 <action android:name="android.intent.action.GET_CONTENT" />
