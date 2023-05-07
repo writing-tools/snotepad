@@ -1,5 +1,6 @@
 package info.aario.snotepad;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.fragment.app.Fragment;
@@ -131,30 +132,41 @@ public class ListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
         setHasOptionsMenu(true);
         activity = (MainActivity) getActivity();
         View view = inflater.inflate(R.layout.list_fragment, container, false);
         // Inflate the layout for this fragment
         lvFiles = (ListView) view.findViewById(R.id.filesList);
-        lvFiles.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        // This is when a note is selected.
+        lvFiles.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3)
+            {
                 activity.editFile(path + "/" + ((TextView) arg1.findViewById(android.R.id.text1)).getText().toString());
+                // TODO: how to make this persist. works
+                ((TextView) arg1.findViewById(android.R.id.text1)).setBackgroundColor(Color.RED);
             }
+
         });
         registerForContextMenu(lvFiles);
         svSearch = (SearchView) view.findViewById(R.id.searchView);
         // svSearch.setTextColor(android.graphics.Color.WHITE); // ELIAS: does not work..
-        svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+            public boolean onQueryTextSubmit(String query)
+            {
                 search(query);
                 return true;
             }
 
             @Override
-            public boolean onQueryTextChange(String newText) {
+            public boolean onQueryTextChange(String newText)
+            {
                 search(newText);
                 return true;
             }
@@ -162,9 +174,11 @@ public class ListFragment extends Fragment {
         FloatingActionButton fab = (FloatingActionButton) activity.findViewById(R.id.fab);
         fab.setVisibility(View.VISIBLE);
         fab.setImageDrawable(ContextCompat.getDrawable(activity, android.R.drawable.ic_input_add)); // add button
-        fab.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 LocalDateTime myDateObj = LocalDateTime.now(); // Elias
                 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyyMMdd");
                 String formattedDate = myDateObj.format(myFormatObj);
@@ -177,19 +191,27 @@ public class ListFragment extends Fragment {
         return view;
     }
 
+    // When a note is hard pressed (to bring the delete action):
     public void onCreateContextMenu(final ContextMenu menu,
-                                    final View v, final ContextMenu.ContextMenuInfo menuInfo) {
+                                    final View v, final ContextMenu.ContextMenuInfo menuInfo)
+    {
         activity.getMenuInflater().inflate(R.menu.list_menu, menu);
+        activity.makeSnackBar("About to delete now.");
     }
 
-    public boolean onContextItemSelected(final MenuItem item) {
+    // Below function is on delete button pressed:
+    public boolean onContextItemSelected(final MenuItem item)
+    {
         int id = item.getItemId();
         AdapterView.AdapterContextMenuInfo itemInfo = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_delete) {
+        if (id == R.id.action_delete)
+        {
             String filename = ((TextView) itemInfo.targetView.findViewById(android.R.id.text1)).getText().toString();
-            if (activity.filer.delete(path + "/" + filename)) {
+            activity.makeSnackBar("Delete button pressed.");
+            if (activity.filer.delete(path + "/" + filename))
+            {
                 search(svSearch.getQuery().toString());
 
                 activity.makeSnackBar("File " + filename + " successfully deleted."); // Elias: notification

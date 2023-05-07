@@ -11,3 +11,6 @@ X - how to build it on linux?
 
 * put the buttons on top bar (remove "snotepad" text)
 * put the add button on top
+
+
+colour the textlist item clicked, remove colour when another one is clicked. Maintain this colour so that you know what is the last note you edited.
