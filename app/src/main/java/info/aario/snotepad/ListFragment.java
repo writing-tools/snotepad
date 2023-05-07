@@ -148,7 +148,7 @@ public class ListFragment extends Fragment {
             {
                 activity.editFile(path + "/" + ((TextView) arg1.findViewById(android.R.id.text1)).getText().toString());
                 // TODO: how to make this persist. works
-                ((TextView) arg1.findViewById(android.R.id.text1)).setBackgroundColor(Color.RED);
+                // ((TextView) arg1.findViewById(android.R.id.text1)).setBackgroundColor(Color.RED);
             }
 
         });

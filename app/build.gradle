@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion '30.0.3'
     defaultConfig {
-        applicationId "snotepad" // the name of the storage folder
+        applicationId "Notes.EL" // the name of the storage folder. must contain a '.'
         minSdkVersion 26
         targetSdkVersion 29 // Note that if SDK version is higher than 29, the app will not have permission to write files
         versionCode 2
