@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 29
     buildToolsVersion '30.0.3'
     defaultConfig {
         applicationId "Notes.EL"
         minSdkVersion 26
-        targetSdkVersion 33 // Note that if SDK version is higher than 29, the app will not have permission to write files
+        targetSdkVersion 29 // Note that if SDK version is higher than 29, the app will not have permission to write files
         versionCode 2
         versionName "1.2.2"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
