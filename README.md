@@ -15,9 +15,9 @@ SNotepad is simple yet professional notepad app for android. The S stands for Su
 <a href="https://f-droid.org/packages/info.aario.snotepad/" target="_blank">
 <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80"/></a>
 
-<img src='screenshots/Screenshot_1489958851.png?raw=true'> <img src='screenshots/Screenshot_1489958875.png?raw=true'><br/>
-<img src='screenshots/Screenshot_1489958882.png?raw=true'> <img src='screenshots/Screenshot_1489958894.png?raw=true'><br/>
-<img src='screenshots/Screenshot_1489958932.png?raw=true'>
+<img src='screenshots/Screenshot_1489958851.png?raw=true' width="200"> <img src='screenshots/Screenshot_1489958875.png?raw=true' width="200"><br/>
+<img src='screenshots/Screenshot_1489958882.png?raw=true' width="200"> <img src='screenshots/Screenshot_1489958894.png?raw=true' width="200"><br/>
+<img src='screenshots/Screenshot_1489958932.png?raw=true' width="200">
 
 Copyright (C) 2017 Aario Shahbany
 
