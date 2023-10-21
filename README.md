@@ -4,10 +4,22 @@ https://github.com/aario/snotepad
 Download APK from:
 https://github.com/elyoas/snotepad/releases
 
-Copy project:
-`git clone git@github.com:elyoas/snotepad.git`
+# TODO:
+1 - Option to choose folder, reload notes in that folder.
+2 - Button to insert date e.g. 2021-07-19
+3 - Show total notes count + total size (backup purposes)
+4 - Highlight note entry briefly when going back, to give the user a sense of location.
+5 - Notes should be ordered by modified date by second, not minute (if two files updated in the same minute, they won't be ordered according to modification date). See: snotepad/app/src/main/java/info/aario/snotepad/Filer.java#L21
+6 - change the text colour when searching for note to white
+7 - colour the textlist item clicked, remove colour when another one is clicked. Maintain this colour so that you know what is the last note you edited.
+8 - Do not scroll to top when deleting a note
+9 - LOW: Put the add button on top
 
-https://github.com/elyoas/snotepad
+X - fix building for 'release' mode
+X - Make date as note's name
+X - Reduce time of "Changes saved to..." (after saving a file)
+X - how to build it on linux?
+X - put the buttons on top bar (remove "snotepad" text)
 
 ### Notes
 SNotepad is simple yet professional notepad app for android. The S stands for Suckless/Simple.
