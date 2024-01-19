@@ -15,6 +15,8 @@ https://github.com/elyoas/snotepad/releases
 08 - Do not scroll to top when deleting a note
 09 - LOW: Put the add button on top
 10 - highlight all occurrences in yellow (like the Bible search)
+11 - search a note + search globally showing matches highlighten in a list with note name https://github.com/aario/snotepad/issues/28
+12 - Add ability to change folder https://github.com/aario/snotepad/issues/27
 
 X - fix building for 'release' mode
 X - Make date as note's name
