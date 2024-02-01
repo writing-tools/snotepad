@@ -2,22 +2,20 @@
 https://github.com/aario/snotepad
 
 Download APK from:
-https://github.com/elyoas/snotepad/releases
+https://github.com/elyahw/snotepad/releases
 
 # TODO:
-01 - Option to choose folder, reload notes in that folder.
-02 - Button to insert date e.g. 2021-07-19
-03 - Show total notes count + total size (backup purposes)
-04 - Highlight note entry briefly when going back, to give the user a sense of location.
-05 - Notes should be ordered by modified date by second, not minute (if two files updated in the same minute, they won't be ordered according to modification date). See: snotepad/app/src/main/java/info/aario/snotepad/Filer.java#L21
-06 - change the text colour when searching for note to white
-07 - colour the textlist item clicked, remove colour when another one is clicked. Maintain this colour so that you know what is the last note you edited.
-08 - Do not scroll to top when deleting a note
-09 - LOW: Put the add button on top
-10 - highlight all occurrences in yellow (like the Bible search)
-11 - search a note + search globally showing matches highlighten in a list with note name https://github.com/aario/snotepad/issues/28
-12 - Add ability to change folder https://github.com/aario/snotepad/issues/27
-13 - Show line numbers
+1 - Button to insert date e.g. 2021-07-19
+2 - Show total notes count + total size (backup purposes)
+3 - Highlight note entry briefly when going back, to give the user a sense of location.
+4 - Notes should be ordered by modified date by second, not minute (if two files updated in the same minute, they won't be ordered according to modification date). See: snotepad/app/src/main/java/info/aario/snotepad/Filer.java#L21
+5 - change the text colour when searching for note to white
+6 - colour the textlist item clicked, remove colour when another one is clicked. Maintain this colour so that you know what is the last note you edited.
+7 - Do not scroll to top when deleting a note
+
+O - Show line numbers [Exists in Markor]
+O - Option to choose folder, reload notes in that folder https://github.com/aario/snotepad/issues/27 [Exists in Markor]
+O - search a note + highlight matches + search globally showing matches highlighten in a list with note name https://github.com/aario/snotepad/issues/28 [Exists in Markor]
 
 X - fix building for 'release' mode
 X - Make date as note's name
