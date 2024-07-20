@@ -1,8 +1,7 @@
-#### Forked from:
+# Forked from:
 https://github.com/aario/snotepad
 
-Download APK from:
-https://github.com/elyahw/snotepad/releases
+Download APK from releases section.
 
 # TODO:
 1 - Button to insert date e.g. 2021-07-19
@@ -22,6 +21,8 @@ X - Make date as note's name
 X - Reduce time of "Changes saved to..." (after saving a file)
 X - how to build it on linux?
 X - put the buttons on top bar (remove "snotepad" text)
+
+*****
 
 ### Notes
 SNotepad is simple yet professional notepad app for android. The S stands for Suckless/Simple.
